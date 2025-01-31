@@ -146,7 +146,7 @@ def pay_now(request):
     return render(request, 'checkout.html')
 
 import logging
-stripe.api_key = "sk_test_51PiV2tSHhsNN23Z1uaemlRWp0JTkiuLQk42Jib5ZT858F2UEPKGdoSnSi69XiBTL0TzTuZb3j44vCrQc647smSn000I8nEflJn"
+stripe.api_key = ""
 
 
 def create_checkout_session(request):
