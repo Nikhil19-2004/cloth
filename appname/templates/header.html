@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to FontAwesome for icons -->
+    <link rel="stylesheet" href="{% static 'path/to/font-awesome/css/all.min.css' %}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background for the page */
+        }
+
+        .header1 {
+            background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);; /* Gradient background */
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+        }
+
+        .header1 ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .header1 ul li {
+            margin: 0 15px;
+        }
+
+        .header1 ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px; /* Slightly smaller font size for better readability */
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transitions */
+        }
+
+        .header1 ul li a:hover {
+            transform:scale(1.0);
+            background-color:rgba(255, 255, 255, 0.3);
+            padding:10px 15px;
+            border-radius:10px;
+        }
+
+        .header1 ul li i {
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .header1 ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header1 ul li {
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header1 ul li a {
+                font-size: 16px; /* Smaller font size on very small screens */
+                padding: 8px 12px;
+            }
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header1" role="navigation">
+        <img class="logo" src={% static 'images/logo.png' %}>
+        <ul>
+            <li><a href="/" aria-label="home"><i class="fa-solid fa-house"></i> HOME</a></li>
+            <li><a href="/contact" aria-label="Contact"><i class="fa fa-phone"></i> CONTACT</a></li>
+            <li><a href="/product" aria-label="Product"><i class="fa-solid fa-cube"></i> PRODUCT</a></li>
+            <li><a href="/aboutus" aria-label="About Us"><i class="fa fa-info-circle"></i> ABOUT US</a></li>
+            <li><a href="/cart" aria-label="Cart"><i class="fa-solid fa-cart-shopping"></i> CART</a></li>
+            <li><a href="/logout" aria-label="Logout"><i class="fa-solid fa-right-from-bracket"></i> LOGOUT</a></li>
+        </ul>
+    </div>
+</body>
+</html>

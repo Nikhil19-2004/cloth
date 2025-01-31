@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/ccdbd762c2.js" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .main-div {
+            width: 100%;
+            background: linear-gradient(151deg, rgb(2, 108, 223) 38.49%, rgb(0, 246, 253) 62.20%);            position: relative;
+            overflow: hidden;
+        }
+
+        .content {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .carousel-item {
+            height: 500px;
+            background-size: cover;
+            border-radius:10px;
+            background-position: center;
+        }
+        .carousel-item:hover{
+            transform: scale(1.1);
+            border-radius:10px;
+        }
+        .content1 {
+            margin: 20px;
+            width: 20%;
+            height:100%;
+            float:left;
+            text-align:center;
+            background-color:#fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .row {
+            height: 250px;
+            object-fit: cover;
+        }
+        img{
+            margin-left:55px;
+            height: 100%;
+         }
+        .add_to_cart {
+            padding: 10px;
+        }
+        .add_to_cart h2 {
+            font-size: 18px;
+
+            font-weight: bold;
+        }
+        .add_to_cart p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom:-10px;
+        }
+        .add_to_cart del{
+            color:#333;
+            font-size:15px;
+            font-weight: bold;
+        }
+        .add_to_cart a {
+            background-color: #4CAF50;
+            color: white;
+            margin-top:-30px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .add_to_cart a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="content">
+
+            <!-- Bootstrap Carousel -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+                <div class="carousel-inner"><a href="/product">
+                    <div class="carousel-item active" style="background-image: url({% static 'images/shop2.jpg' %});"></div>
+                    <div class="carousel-item" style="background-image: url({% static 'images/shop.avif' %});"></div>
+
+                    <div class="carousel-item" style="background-image: url({% static 'images/shop3.jpg' %});"></div>
+                    <div class="carousel-item" style="background-image: url({% static 'images/shop4.jpg' %});"></div>
+                    <div class="carousel-item" style="background-image: url({% static 'images/shop5.jpg' %});"></div>
+                 </a>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+            <h1 class="text-center">Our Products</h1>
+
+            <!-- Product Cards -->
+             <div class="slide">
+            <div class="content1">
+                <div class="row">
+                <img src="{% static 'images/buy1.jpg' %}" alt="">
+                </div>
+                <div class="add_to_cart">
+                    <h2>Lymio Casual Shirt for Men</h2>
+                    <p><del>₹590</del><br>₹449</p><br>
+                    <a href='/product'>More Products...</a>
+                </div>
+               
+            </div>
+        </div>
+        <div class="slide">
+            <div class="content1">
+                <div class="row">
+                <img src="{% static 'images/buy2.jpg' %}" alt="">
+                </div>
+                <div class="add_to_cart">
+                    <h2>Men's Cotton Stitched Half</h2>
+                    <p><del>₹550</del><br>₹459</p><br>
+                    <a href='/product'>More Products...</a>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content1">
+                <div class="row">
+                <img src="{% static 'images/cargo1.jpg' %}" alt="">
+                </div>
+                <div class="add_to_cart">
+                    <h2>Lymio Men Cargo </h2>
+                    <p><del>₹789</del><br>₹699</p><br>
+                    <a href='/product'>More Products...</a>
+                </div>
+               
+            </div>
+        </div>
+        <div class="slide">
+            <div class="content1">
+                <div class="row">
+                <img src="{% static 'images/cargo4.jpg' %}" alt="">
+                </div>
+                <div class="add_to_cart">
+                    <h2>Baggy Cargo Pant Trouser</h2>
+                    <p><del>₹769</del><br>₹679</p><br>
+                    <a href='/product'>More Products...</a>
+                </div>
+               
+            </div>
+        </div>
+       
+            <!-- Add more product cards as needed -->
+            
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    {% endblock %}
+</body>
+</html>

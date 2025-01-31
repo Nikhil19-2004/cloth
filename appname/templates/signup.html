@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+<style>
+        body{
+            background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+        }
+        ::selection {
+            background-color: gray;
+        }
+
+        .container {
+           margin-top:10%;
+           margin-bottom:10%;
+           margin-left:35%;
+
+        }
+
+        .form {
+            width: 400px;
+            height: 460px;
+            background-image: linear-gradient(to bottom, #424242, #212121);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 0.5rem;
+        }
+        .title {
+            color: wheat;
+            margin: 3rem 0;
+            font-size: 2rem;
+        }
+
+        .input {
+            margin: 0.5rem 0;
+            padding: 1rem 0.5rem;
+            width: 20rem;
+            background-color: inherit;
+            color: wheat;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid wheat;
+            transition: all 400ms;
+            border-radius: 0.5rem;
+
+        }
+        .input:hover {
+          background-color: #424242;
+          border: none;
+          border-radius: 0.5rem;
+          transform: scale(1.1);
+      }
+        .btn {
+            height: 3rem;
+            width: 20rem;
+            margin-top: 2rem;
+            background-color: wheat;
+            border-radius: 0.5rem;
+            border: none;
+            font-size: 1.2rem;
+            transition: all 400ms;
+            cursor: pointer;
+            box-shadow:
+            0 0 10px antiquewhite,
+            0 0 10px antiquewhite;
+        }
+        .btn:hover {
+            background-color: antiquewhite;
+            box-shadow: none;
+            transform: scale(1.1);
+        }
+        a{
+            text-decoration:none;
+            font-size:15px;
+            font-weight:bolder;
+            margin-top:25px;
+            margin-left:-40%;
+            color: wheat;
+        }
+        a:hover{
+            color: #fff;
+            
+        }
+        .Btn {
+            position: relative;
+            width: 150px;
+            height: 55px;
+            border-radius: 45px;
+            border: none;
+            background-color: rgb(255, 136, 0);
+            color: white;
+            margin-top:10px;
+            box-shadow: 0px 10px 10px rgb(255, 136, 0)inset,
+            0px 5px 10px rgba(5, 5, 5, 0.212),
+            0px -10px 10px rgb(255, 136, 0) inset;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          .Btn::before {
+            width: 70%;
+            height: 2px;
+            position: absolute;
+            background-color: rgba(250, 250, 250, 0.678);
+            content: "";
+            filter: blur(1px);
+            top: 7px;
+            border-radius: 50%;
+          }
+          
+          .Btn::after {
+            width: 70%;
+            height: 2px;
+            position: absolute;
+            background-color: rgba(250, 250, 250, 0.137);
+            content: "";
+            filter: blur(1px);
+            bottom: 7px;
+            border-radius: 50%;
+          }
+          
+          .Btn:hover {
+            animation: jello-horizontal 0.9s both;
+          }
+          
+          @keyframes jello-horizontal {
+            0% {
+              transform: scale3d(1, 1, 1);
+            }
+          
+            30% {
+              transform: scale3d(1.25, 0.75, 1);
+            }
+          
+            40% {
+              transform: scale3d(0.75, 1.25, 1);
+            }
+          
+            50% {
+              transform: scale3d(1.15, 0.85, 1);
+            }
+          
+            65% {
+              transform: scale3d(0.95, 1.05, 1);
+            }
+          
+            75% {
+              transform: scale3d(1.05, 0.95, 1);
+            }
+          
+            100% {
+              transform: scale3d(1, 1, 1);
+            }
+          }
+    </style>
+</head>
+<body>
+ 
+    <div class="container">
+        <form class="form" action="" method="post">{% csrf_token %}
+          <p class="title">SignUp Form</p>
+          <input type="text" name="username" class="input" placeholder="Username" required>
+          <input type="password" name="password1" class="input" placeholder="Password" required>
+          <input type="password" name="password2" class="input" placeholder="Confirm Password" required>
+          <button class="Btn" type="submit">
+           Sign Up
+          </button>
+          <a href="/login">Already Have An Account</a>
+        </form>
+      </div>
+</body>
+</html>
+
+

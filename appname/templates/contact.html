@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="https://kit.fontawesome.com/ccdbd762c2.js" crossorigin="anonymous"></script>
+        <style>
+            body{
+                /* background-color: #25008a; */
+                background: linear-gradient( #050972, #b9b7cf);
+            }
+            .container p{
+                font-size: 80px;
+                margin-top: 40px;
+                margin-left: 450px;
+                font-weight: bold;
+                color: #FFFFF0;
+                margin-bottom:-30px;
+                
+            }
+            .container img{
+                width: 100%;
+                height: 80vh;
+                border-radius:20px;
+                margin-top:10px;
+
+            }
+            .container p{
+                position: relative;
+            }
+            .container4{
+                display: flex;
+                background-color: beige;
+                height: 80vh;
+            }
+            .contact-container{
+                max-width: 960px;
+                margin: auto;
+                width: 100%;
+                display: flex;
+                grid-template-columns: repeat(2,ifr);
+                gap: 1.5re;
+                /* background: #020947; */
+                background: linear-gradient(#010342, #1b04c7); 
+                 box-shadow: 0 0 1rem hsla(0 0 0/ 16%);
+                border-radius: 0.5rem;
+                overflow: hidden;
+                margin-top: 70px;
+            }
+            .form-container{
+                padding: 20px;
+                width: 250px;
+            }
+            .form-container h3{
+                font-size: 30px;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                color: #ffffff;
+                text-align: center;
+            }
+            .contact-form{
+                display: grid;
+                row-gap: 1rem;
+
+            }
+            .contact-form input,.contact-form,textarea{
+                width: 100%;
+                border: none;
+                outline: none;
+                padding: 10px;
+                font-size: 0.9rem;
+                color: #080808;
+                border-radius: 0.4rem;
+
+
+            }
+            .contact-form textarea{
+                
+                height: 200px;
+            }
+            .contact-form .btn{
+                border: none;
+                outline: none;
+                background: #080131;
+                font-size: 1rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                cursor: pointer;
+                color: white;
+            }
+            .contact-form .btn:hover{
+                background: rgb(39, 125, 223);
+                transition: 0.3s all linear;
+            }
+            .map iframe{
+                height: 97%;
+                width: 130%;
+                margin-left: 100px;
+                padding: 10px;
+            }
+            section{
+                margin-bottom:40px;
+            }
+         </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <p>Contact Us</p>
+
+        </div>
+        <section>
+            <div class="contact-container">
+                <div class="form-container">
+                    <h3>Message Us</h3>
+                    <form method="POST" class="contact-form" method="POST">{% csrf_token %}
+                        <input type="text"  name="name" id="name" placeholder="Your Name" required>
+                        <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                        <input type="text" name="sub" id="sub" placeholder="Enter Subject" required>
+                        <textarea name="message" id="message" placeholder="Write Message" required></textarea>
+                        <input type="submit" value="send" class="btn">
+                    </form>
+
+
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.4208018074864!2d76.7449163753708!3d30.67843437461048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fec0fc0000001%3A0x2fe21eed866f0d52!2sThinkNEXT%20Technologies%20-%20Industrial%20Training%20Internship%20Chandigarh%20Mohali!5e0!3m2!1sen!2sin!4v1724580322306!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+    </body>
+</html>

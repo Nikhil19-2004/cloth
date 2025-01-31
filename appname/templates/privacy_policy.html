@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'main' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - [Your Boutique Name]</title>
+    <script src="https://kit.fontawesome.com/ccdbd762c2.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #140967;
+            background: linear-gradient(#070e6f, #047db0);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e0169;
+            color: #fff;
+            padding: 20px 0;
+            border-bottom: 2px solid #1e90ff;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .content {
+            background-color: #020471;
+            background: linear-gradient(rgb(7, 7, 102), purple);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #130241;
+            margin-top: 20px;
+            border-bottom: 2px solid #1e90ff;
+            padding-bottom: 5px;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0 0 20px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        /* ul li::before {
+            content: "\2022";
+            color: #1e90ff;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            line-height: 1;
+        } */
+
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #0d47a1;
+        }
+
+        .footer {
+            background-color: #130241;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            border-top: 2px solid #1e90ff;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Privacy Policy</h1>
+        </div>
+    </header>
+    
+    <div class="container content">
+        <h2 id="introduction">1. Introduction</h2>
+        <p>Welcome to [Your Boutique Name]! We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and disclose information about you when you visit our website [your website URL] and use our services.</p>
+
+        <h2 id="information-we-collect">2. Information We Collect</h2>
+        <p>We may collect the following types of information:</p>
+        <ul>
+            <li><strong>Personal Information:</strong> Name, email address, phone number, and any other information you provide to us.</li>
+            <li><strong>Payment Information:</strong> Credit card details or other payment information when you make a purchase.</li>
+            <li><strong>Usage Data:</strong> Information about how you use our website and services.</li>
+        </ul>
+
+        <h2 id="how-we-use-your-information">3. How We Use Your Information</h2>
+        <p>We use your information to:</p>
+        <ul>
+            <li>Process and manage your orders and payments.</li>
+            <li>Provide customer support and respond to your inquiries.</li>
+            <li>Improve our website and services.</li>
+            <li>Send you promotional materials and updates, if you have opted in to receive them.</li>
+        </ul>
+
+        <h2 id="how-we-share-your-information">4. How We Share Your Information</h2>
+        <p>We may share your information with:</p>
+        <ul>
+            <li><strong>Third-Party Service Providers:</strong> Who assist us in operating our website and providing services.</li>
+            <li><strong>Legal Authorities:</strong> If required to comply with legal obligations or to protect our rights.</li>
+        </ul>
+
+        <h2 id="your-rights">5. Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access the personal information we hold about you.</li>
+            <li>Request correction or deletion of your personal information.</li>
+            <li>Opt out of receiving promotional communications from us.</li>
+        </ul>
+
+        <h2 id="security">6. Security</h2>
+        <p>We take reasonable measures to protect your information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or electronic storage is completely secure.</p>
+
+        <h2 id="changes-to-this-privacy-policy">7. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on our website. You are advised to review this policy periodically for any changes.</p>
+
+        <h2 id="contact-us">8. Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+        <p>Email: [Your Email Address]<br>Phone: [Your Phone Number]<br>Address: [Your Boutique Address]</p>
+    </div>
+
+
+    {% endblock %}
+</body>
+</html>

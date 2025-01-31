@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        h1 {
+            color: #4CAF50;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .actions {
+            margin-top: 20px;
+        }
+
+        .actions a.bt {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #4CAF50;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .actions a.bt:hover {
+            background-color: #45a049;
+        }
+
+        .text-center {
+            margin-bottom: 20px;
+        }
+
+        .text-center dotlottie-player{
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+            border: none;
+        }
+
+        .text-center p {
+            font-size: 20px;
+            color: #4CAF50;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="text-center">
+          <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+          <dotlottie-player src="https://lottie.host/f015bd79-aaed-4c3b-90d4-48904c310ca7/KGvzi5F7ZF.json" background="transparent" speed="1" autoplay direction="1" mode="normal"></dotlottie-player>
+            <p>
+                {% if payment_status == 'success' %}
+                <span>Thanks for your order!</span>
+                {% else %}
+                <span>Thanks for your order!</span>
+                {% endif %}
+            </p>
+        </div>
+        <p>
+             If you have any questions, feel free to email us at
+            <a href="mailto:orders@example.com">orders@example.com</a>.
+        </p>
+        <div class="actions">
+            <a href="{% url 'home' %}" class="bt">Exit</a>
+        </div>
+    </section>
+</body>
+</html>

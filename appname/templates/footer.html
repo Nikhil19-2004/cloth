@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* Add to your existing CSS file or a new one */
+        .footer {
+            background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            border-top: 2px solid #1e90ff;
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: none;
+            transform:scale(1.0);
+            background-color:rgba(255, 255, 255, 0.3);
+            padding:10px 15px;
+            border-radius:10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<footer class="footer">
+    <div class="footer-content">
+    <p>&copy; {{ current_year }} [Your Boutique Name]. All rights reserved.</p><br>
+    <a href="{% url 'aboutus' %}">About Us</a>    |   <a href="{% url 'contact' %}">Contact</a>   |   <a href="{% url 'privacy_policy' %}">Privacy Policy</a> | <a href="{% url 'terms_of_service' %}">Terms of Service</a>
+</div>
+</footer>
+
+</body>
+</html>
